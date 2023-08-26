@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+<body>
+  <%- include("./partials/nav.ejs") %> 
+
+  <h2 class="add-contact">Add Contact</h2>
+
+  <form action="/save" method="POST">
+   
+      <label for="firstName">First-Name :</label>
+      <input name="firstName" required>  
+   
+      <label for="lastName">Last-Name :</label>
+      <input name="lastName" required>
+    
+      <label for="phone">Phone :</label>
+      <input name="phone" required>
+   
+      <label for="email">Email :</label>
+      <input name="email">
+  
+      <label for="note">Adreess/Note :</label>
+      <textarea name="note" id="" cols="30" rows="4"></textarea>
+    
+      <button type="submit" onclick="return confirm('Contact Added Succesfully..!!')">SUBMIT</button> 
+  </form>
+
+
+</body>
+</html>

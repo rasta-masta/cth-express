@@ -1,0 +1,68 @@
+.detail-contact{
+  max-width: 250px;
+  margin: 100px auto;
+  border-radius: 5px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 6px 6px 12px grey;
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.25) 0 100%), url('particle.png');
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+ 
+
+.detail-contact h3{
+  padding-top: 10px;
+  border-top: 2px double coral;
+}
+
+.detail-contact img{
+  width: 100%;
+  border-radius: 50%;  
+  box-shadow:turquoise 4px 4px 25px ;
+}
+
+.detail-contact p{
+  margin: 2px;
+}
+
+.btn{
+  display: flex;
+  max-width: 100%;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: space-evenly;
+}  
+
+ .btn a{
+  border-radius: 3px;
+  font-weight: 900;
+  box-shadow: 4px 4px 8px black;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  margin-top: 5px;
+ }
+
+ .btn a:hover{
+  background-color: black;
+  color: white;
+ }
+
+ /* form update */
+ .update a {
+  max-width: 90px;
+  margin: 0 auto;
+  text-align: center;
+  background-color:seagreen;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+ }
+
+ .update a:hover{
+  background-color: black;
+  color: white;
+ }

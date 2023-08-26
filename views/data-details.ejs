@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+<body>
+  <%- include("./partials/nav.ejs") %>
+  
+  <div class="detail-contact">
+    <img src="/portrait.jpg" alt="portrait">
+    
+
+    <h3><%= result[0].firstName %> <%= result.lastName%></h3>
+    <p> <%= result[0].phone %></p>
+    <p> <%= result[0].email %></p>
+    <p> <%= result[0].note %></p> 
+    
+    <div class="btn">  
+        <a href="/edit/<%= result[0].id %>">EDIT</a>
+                
+        <a href="/details/delete/<%= result[0].id %>" 
+          onclick="return confirm('Are You Sure?')"
+          >DELETE</a>                    
+    </div>  
+  </div>  
+     
+</body>
+</html>

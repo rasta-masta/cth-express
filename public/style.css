@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+body{
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+  box-sizing: border-box; 
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.9) 0 100%), url('Ex.jpg');
+  background-position: center;
+  background-size: contain;
+}
+
+nav{
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 15px 50px;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: first baseline;
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.45) 0 100%), url('Express.png');
+  background-position: center;
+  background-size:cover;
+  box-shadow: 2px 6px 16px black;
+}
+
+.container{
+  position: relative;
+}
+nav h1{
+  font-size: 50px;  
+}
+
+nav h1::first-letter{
+  font-size: 62px;
+  color:chocolate;
+}
+
+.menu{
+  cursor: pointer;
+  margin-left: 170px;
+  margin-right: 20px;
+  margin-bottom: 10px;  
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+}
+.menu:hover{
+  filter: opacity(0.3);
+}
+
+.add:hover{
+  filter: opacity(0.3);
+}
+
+.content{
+  display: none;
+  position: absolute;
+  left: 150px;
+  min-width: 125px;
+  background-color:white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px black;
+}
+
+a{  
+  display: block;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: black;
+}
+
+.container:hover .content{
+  display: block;
+}
+.content a:hover{
+  background-color: bisque;
+}
+
+
+/* content data-details*/
+
+.box{
+  display: flex;
+  max-width: 850px;
+  margin: 45px auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px 5px;
+ }
+
+.content-data{
+  border: 0.4px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 20%; 
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0px 6px 10px grey;
+  background-size: cover; 
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.25) 0 100%), url('electro.jpg');
+  background-position: center;
+  background-size:cover;
+  transition: box-shadow 0.25s linear;
+}  
+
+.content-data:hover{
+  background-size: cover; 
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.1) 0 100%), url('Ex.jpg');
+  background-position: center;
+  box-shadow: 10px 4px 12px grey;
+}
+
+.content-data .name{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.content-data p{
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* Form Table */
+.add-contact{
+  text-align: center;
+}
+
+form{
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+input{
+  width: 100%;
+  display: block;
+  padding: 6px 10px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+textarea{
+  padding: 6px 10px;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+label{
+  font-size: 14px;
+}
+
+form button{
+  border: none;
+  padding: 10px 15px;
+  margin-left: 40%;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 4px 4px 8px grey;
+  background-color: slateblue;
+} 
+

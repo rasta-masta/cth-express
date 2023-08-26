@@ -1,0 +1,14 @@
+<div class="box">
+  <% if(contacts.length >0) { %>
+    <% contacts.forEach(result => { %>
+     
+        <div class="content-data"> <a href="/details/<%= result.id %>">
+            <p class="name"><%= result.firstName%> <%= result.lastName %></p>
+            <p><%= result.phone  %></p>
+            <p><%= result.email  %></p>
+            <p><%= result.note %></p>
+          </a></div>        
+        <% }) %>
+      <% } else {%>
+        <p> There are no contacts to display</p>
+    <% }%> 

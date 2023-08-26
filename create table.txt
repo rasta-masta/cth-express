@@ -1,0 +1,139 @@
+db.connect(function(err){
+  if(err){
+    console.log(err)
+  } else {
+     const sql = "CREATE TABLE contacts (id INT, firstName VARCHAR(100), lastName VARCHAR(100), phone VARCHAR(50), email VARCHAR(100), note VARCHAR(200))"; 
+     db.query(sql, (err, res) => {
+      if(err){
+        console.log(err)
+      } else {
+        console.log('TABLE CREATED..!')
+      }
+     })
+  }
+}) 
+
+
+
+
+.add-contact{
+  max-width: 400px;
+  margin: 5px auto;
+}  
+
+.add-container h2{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.add-contact label{
+  margin: 0px;
+}
+
+.add-contact input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 5px 0 30px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.add-contact textarea{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.add-contact button{
+  padding: 7px 10px ;  
+  border: none;
+  background-color: rgba(12, 91, 116, 0.4);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: box-shadow 0.25s linear;
+  margin-left: 40%;
+  font-size: 16px;
+}
+
+.add-contact button:hover {
+ box-shadow: 2px 2px rgba(143, 129, 129, 0.9);
+}
+
+  background-image: linear-gradient(to right, rgba(255,255,255, 0.9) 0 100%), url('./public/React-logo.jpg');
+  background-position: center;
+  background-size: contain;
+
+  app.post('/save', (req, res) => {
+  const{ name, contact, email } = req.body;
+  const sql = "insert into contacts (name, contact, email) values(?, ?, ?)";
+
+  db.query(sql, [name, contact, email], (err, result) => {
+    if(err) throw err
+    res.render('index');
+  })
+})
+
+<% if(contacts.length >0) { %>
+      <% contacts.forEach(contact => { %>
+       
+          <div class="content-data"> 
+              <p class="name"><%= contact.firstName%> <%= contact.lastName %></p>
+              <p><%= contact.phone  %></p>
+              <p><%= contact.email  %></p>
+              <p><%= contact.note %></p>
+            </div>
+               
+        <% })%>
+      <% }%>       
+
+      .container-data{
+  max-width: 250px;
+  margin: 100px auto;
+  background-color: rgba(12, 91, 116, 0.4);
+  padding: 10px 10px;
+  border-radius: 5px;
+ }
+
+.data-details img{
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.data-details h3, p{
+  text-align: center;
+  margin: 2px 0;
+}
+
+.data-details h3{
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.del-edit{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.del-edit button{
+  border-radius: 4px;
+  border: none;
+  background-color:white;
+  cursor: pointer;
+  padding: 5px 5px;
+  transition: box-shadow 0.25s linear;
+}
+
+.del-edit a{
+  text-decoration: none;
+}
+
+.del-edit button:hover{
+  box-shadow: 4px 4px rgba(143, 129, 129, 0.9);
+  background-color: greenyellow;
+}
